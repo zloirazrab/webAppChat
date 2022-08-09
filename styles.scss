@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Poppins&family=Roboto:wght@400;500;700&display=swap');
+
+$socialMediaIconDiameter: 20px;
+$chatLightGrey: #A4A4A4;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-family: 'Lato', sans-serif;
+}
+
+.nav {
+  width: 250px;
+  height: 100vh;
+
+  background: linear-gradient(.45turn, #535354, #292F38, #202124);
+  color: aliceblue;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  .navHeader {
+    display: flex;
+    align-items: end;
+    padding: 30px 20px 20px 20px;
+    position: relative;
+
+    font-size: 20px;
+
+    span {
+      white-space: nowrap;
+    }
+
+    .expandIcon {
+      display: block;
+      padding: 0 5px 3px 10px;
+    }
+
+    .settingsIcon {
+      position: absolute;
+      right: 24px;
+      bottom: 18px;
+    }
+  }
+
+  .navAllTreads {
+    display: flex;
+    align-content: center;
+    padding: 10px 20px;
+    color: #B5B5B5;
+
+    .messageIcon {
+      padding: 0 15px 0 0;
+    }
+
+    span {
+      margin: 0 0 2px 0;
+    }
+  }
+
+  .chatsList {
+    padding: 0 20px;
+    height: calc(100vh - 138px);
+    color: #B5B5B5;
+
+    font-weight: 400;
+
+    .channels {
+      height: 50%;
+
+      .channelsSectionHead {
+        display: flex;
+        padding: 10px 0;
+        position: relative;
+        font-size: 12px;
+
+        .channelsSectionHeadCount {
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      .channelsList {
+        height: calc(100% - 40px);
+        overflow: scroll;
+
+        .channelCell {
+          padding: 10px 0 10px 10px;
+        }
+      }
+    }
+  }
+
+  .friends {
+    height: 50%;
+
+    .friendsSectionHead {
+      display: flex;
+      padding: 30px 0 10px 0;
+      position: relative;
+      font-size: 12px;
+
+      .friendsSectionHeadCount {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .friendsList {
+      height: calc(100% - 40px);
+      overflow: scroll;
+
+      .friendCell {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+
+        .activeStatusIcon {
+          align-self: center;
+          background-color: chartreuse;
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+        }
+
+        .profilePic {
+          display: flex;
+          margin: 0 10px;
+          border-radius: 5px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    display: none;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: calc(100vw - 450px);
+  height: 100vh;
+
+  .chatMenu {
+    display: flex;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid $chatLightGrey;
+
+    .chatInfo {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 320px);
+      padding: 35px 0 20px 25px;
+      position: relative;
+
+      .chatName {
+        display: flex;
+
+        font-weight: 900;
+        font-size: 18px;
+
+        .favoriteIcon {
+          padding-left: 5px;
+        }
+      }
+
+      .chatMembersNumber {
+        display: flex;
+        position: absolute;
+        right: 15px;
+
+        font-size: 15px;
+        color: $chatLightGrey;
+
+        .chatMembersNumberIcon {
+          display: block;
+          padding-right: 5px;
+          position: relative;
+
+          img {
+            position: absolute;
+            width: inherit;
+            right: 2px;
+            bottom: 1px;
+          }
+        }
+      }
+    }
+
+    .chatSettings {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      height: 80px;
+      width: 320px;
+      color: $chatLightGrey;
+
+      .chatSearch {
+        background-color: white;
+        display: flex;
+        width: 240px;
+        height: 33px;
+        // вот это нормально? попытка отцентровать, чтобы было на одном уровне с поиском
+        margin: auto 0 16px 0;
+        position: relative;
+
+        border: 1px solid $chatLightGrey;
+        border-radius: 5px;
+
+        span {
+          align-self: center;
+          padding-left: 20px;
+        }
+
+        .searchIcon {
+          position: absolute;
+          right: 10px;
+
+          // центрируем по вертикали
+          top: 55%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .notificationsController {
+        background-color: white;
+        display: flex;
+
+        margin: auto 0 23px 20px;
+        width: 20px;
+        height: 20px;
+        position: relative;
+
+        img {
+          margin: 2px;
+        }
+
+        .notificationsActiveStatusIcon {
+          background-color: #FD4948;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      .chatSettingsIcon {
+        margin: auto 24px 22px 24px;
+      }
+    }
+  }
+
+  .chatView {
+    height: calc(100vh - 160px);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    overflow: scroll;
+
+    .daySection {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .daySectionHeader {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        color: #8D8D8D;
+
+        font-size: 14px;
+
+        .daySectionHeaderLine {
+          // це шобы линии заняли все оставшееся место https://stackoverflow.com/a/15377178/8916464
+          flex-grow: 1;
+          height: 1px;
+          background: #000000;
+          mix-blend-mode: normal;
+          opacity: 0.16;
+          margin: auto 10px;
+        }
+      }
+
+      .message {
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+
+        .messageProfilePicContainer {
+          width: 70px;
+          position: relative;
+
+          .messageProfilePic {
+            position: absolute;
+            display: flex;
+            top: 0;
+            right: 0;
+            border-radius: 15%;
+            overflow: hidden;
+          }
+        }
+
+        .messageBody {
+          display: flex;
+          flex-direction: column;
+          width: calc(100% - 70px);
+          margin-left: 10px;
+
+          font-size: 14px;
+
+          .messageHeader {
+            display: flex;
+            margin-bottom: 5px;
+
+            .messageUsername {
+              font-weight: 700;
+              margin-right: 7px;
+            }
+
+            .messageTime {
+              color: $chatLightGrey;
+            }
+          }
+
+          .photoAttachments {
+            display: flex;
+            flex-direction: column;
+
+            .photoFilename {
+              color: #3577EF;
+            }
+
+            .photoAttachmentContainer {
+              display: flex;
+              position: relative;
+              max-width: 300px;
+
+              .photoAttachment {
+                border-radius: 5px;
+                background-color: #70CC16;
+                overflow: hidden;
+
+                img {
+                  display: block; // чтобы картинку распидорасило на всю ширину
+                  max-width: 300px;
+                }
+              }
+
+              .reactionsContainer {
+                display: flex;
+                position: absolute;
+                bottom: -5px;
+                right: -5px;
+                box-shadow: rgba(100, 100, 111, 0.2) 0 5px 7px 0;
+
+                justify-content: center;
+                height: 24px;
+                width: 40px;
+                background-color: white;
+                border-radius: 10%;
+
+                img {
+                  height: 15px;
+                  margin: auto 0;
+                  padding-right: 5px;
+                }
+
+                .reactionsCounter {
+                  margin: auto 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .messageInput {
+    display: flex;
+    height: 80px;
+    border-top: 1px solid #A4A4A4;
+
+    .inputField {
+      border: none;
+      width: 90%;
+    }
+    .inputOptionIcon {
+      margin: auto 10px;
+      height: 22px;
+    }
+
+    ::placeholder {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 950px) {
+    width: calc(100vw - 250px);
+  }
+
+  @media (max-width: 850px) {
+    width: calc(100vw);
+  }
+}
+
+aside {
+  width: 200px;
+  background: linear-gradient(.45turn, #EBEBEC, #D0D4D8, #CFD3D7);
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+
+  .profileOverviewPic {
+    width: 100%;
+    height: 200px;
+  }
+
+  .profileOverviewNameHeader {
+    display: grid;
+    grid-row-gap: 2px;
+    padding: 15px;
+
+    .name {
+      display: flex;
+
+      span {
+        font-weight: 700;
+      }
+
+      .activeStatusIcon {
+        margin-left: 6px;
+        align-self: center;
+        background-color: #70CC16;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+      }
+    }
+
+    .profession {
+      font-size: 12px;
+      color: #5F6164;
+    }
+  }
+
+  .socialMediaIconsContainer {
+    display: flex;
+    text-align: center;
+    padding: 5px 0 0 15px;
+
+    .socialMediaIcon {
+      background-color: #E8E8EB;
+      height: $socialMediaIconDiameter;
+      width: $socialMediaIconDiameter;
+      margin-right: 7px;
+      border-radius: 50%;
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .messageButtonContainer {
+    display: flex;
+    gap: 5px;
+    padding: 15px 0 15px 15px;
+
+    .messageButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: #3577EF;
+      color: white;
+      width: 134px;
+      height: 25px;
+      border-radius: 5px;
+
+      font-size: 14px;
+    }
+
+    .expandOptionsButton {
+      display: flex;
+      background-color: #3577EF;
+      justify-content: center;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 3px;
+
+      .expandTriangleIcon {
+        width: 0;
+        height: 0;
+        border: 4px solid transparent;
+        border-top: 4.5px solid white;
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .infoCell {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 15px 15px;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    .infoType {
+      color: #5F6164;
+    }
+  }
+
+  @media (max-width: 950px) {
+    display: none;
+  }
+}

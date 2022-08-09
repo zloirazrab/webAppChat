@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Poppins&family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-family: "Lato", sans-serif;
+}
+
+.nav {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(0.45turn, #535354, #292F38, #202124);
+  color: aliceblue;
+  font-size: 14px;
+  font-weight: 400;
+}
+.nav .navHeader {
+  display: flex;
+  align-items: end;
+  padding: 30px 20px 20px 20px;
+  position: relative;
+  font-size: 20px;
+}
+.nav .navHeader span {
+  white-space: nowrap;
+}
+.nav .navHeader .expandIcon {
+  display: block;
+  padding: 0 5px 3px 10px;
+}
+.nav .navHeader .settingsIcon {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+}
+.nav .navAllTreads {
+  display: flex;
+  align-content: center;
+  padding: 10px 20px;
+  color: #B5B5B5;
+}
+.nav .navAllTreads .messageIcon {
+  padding: 0 15px 0 0;
+}
+.nav .navAllTreads span {
+  margin: 0 0 2px 0;
+}
+.nav .chatsList {
+  padding: 0 20px;
+  height: calc(100vh - 138px);
+  color: #B5B5B5;
+  font-weight: 400;
+}
+.nav .chatsList .channels {
+  height: 50%;
+}
+.nav .chatsList .channels .channelsSectionHead {
+  display: flex;
+  padding: 10px 0;
+  position: relative;
+  font-size: 12px;
+}
+.nav .chatsList .channels .channelsSectionHead .channelsSectionHeadCount {
+  position: absolute;
+  right: 0;
+}
+.nav .chatsList .channels .channelsList {
+  height: calc(100% - 40px);
+  overflow: scroll;
+}
+.nav .chatsList .channels .channelsList .channelCell {
+  padding: 10px 0 10px 10px;
+}
+.nav .friends {
+  height: 50%;
+}
+.nav .friends .friendsSectionHead {
+  display: flex;
+  padding: 30px 0 10px 0;
+  position: relative;
+  font-size: 12px;
+}
+.nav .friends .friendsSectionHead .friendsSectionHeadCount {
+  position: absolute;
+  right: 0;
+}
+.nav .friends .friendsList {
+  height: calc(100% - 40px);
+  overflow: scroll;
+}
+.nav .friends .friendsList .friendCell {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.nav .friends .friendsList .friendCell .activeStatusIcon {
+  align-self: center;
+  background-color: chartreuse;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+}
+.nav .friends .friendsList .friendCell .profilePic {
+  display: flex;
+  margin: 0 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media (max-width: 850px) {
+  .nav {
+    display: none;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: calc(100vw - 450px);
+  height: 100vh;
+}
+main .chatMenu {
+  display: flex;
+  height: 80px;
+  position: relative;
+  border-bottom: 1px solid #A4A4A4;
+}
+main .chatMenu .chatInfo {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 320px);
+  padding: 35px 0 20px 25px;
+  position: relative;
+}
+main .chatMenu .chatInfo .chatName {
+  display: flex;
+  font-weight: 900;
+  font-size: 18px;
+}
+main .chatMenu .chatInfo .chatName .favoriteIcon {
+  padding-left: 5px;
+}
+main .chatMenu .chatInfo .chatMembersNumber {
+  display: flex;
+  position: absolute;
+  right: 15px;
+  font-size: 15px;
+  color: #A4A4A4;
+}
+main .chatMenu .chatInfo .chatMembersNumber .chatMembersNumberIcon {
+  display: block;
+  padding-right: 5px;
+  position: relative;
+}
+main .chatMenu .chatInfo .chatMembersNumber .chatMembersNumberIcon img {
+  position: absolute;
+  width: inherit;
+  right: 2px;
+  bottom: 1px;
+}
+main .chatMenu .chatSettings {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  height: 80px;
+  width: 320px;
+  color: #A4A4A4;
+}
+main .chatMenu .chatSettings .chatSearch {
+  background-color: white;
+  display: flex;
+  width: 240px;
+  height: 33px;
+  margin: auto 0 16px 0;
+  position: relative;
+  border: 1px solid #A4A4A4;
+  border-radius: 5px;
+}
+main .chatMenu .chatSettings .chatSearch span {
+  align-self: center;
+  padding-left: 20px;
+}
+main .chatMenu .chatSettings .chatSearch .searchIcon {
+  position: absolute;
+  right: 10px;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+main .chatMenu .chatSettings .notificationsController {
+  background-color: white;
+  display: flex;
+  margin: auto 0 23px 20px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+main .chatMenu .chatSettings .notificationsController img {
+  margin: 2px;
+}
+main .chatMenu .chatSettings .notificationsController .notificationsActiveStatusIcon {
+  background-color: #FD4948;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+main .chatMenu .chatSettings .chatSettingsIcon {
+  margin: auto 24px 22px 24px;
+}
+main .chatView {
+  height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  overflow: scroll;
+}
+main .chatView .daySection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main .chatView .daySection .daySectionHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: #8D8D8D;
+  font-size: 14px;
+}
+main .chatView .daySection .daySectionHeader .daySectionHeaderLine {
+  flex-grow: 1;
+  height: 1px;
+  background: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.16;
+  margin: auto 10px;
+}
+main .chatView .daySection .message {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+main .chatView .daySection .message .messageProfilePicContainer {
+  width: 70px;
+  position: relative;
+}
+main .chatView .daySection .message .messageProfilePicContainer .messageProfilePic {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  border-radius: 15%;
+  overflow: hidden;
+}
+main .chatView .daySection .message .messageBody {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 70px);
+  margin-left: 10px;
+  font-size: 14px;
+}
+main .chatView .daySection .message .messageBody .messageHeader {
+  display: flex;
+  margin-bottom: 5px;
+}
+main .chatView .daySection .message .messageBody .messageHeader .messageUsername {
+  font-weight: 700;
+  margin-right: 7px;
+}
+main .chatView .daySection .message .messageBody .messageHeader .messageTime {
+  color: #A4A4A4;
+}
+main .chatView .daySection .message .messageBody .photoAttachments {
+  display: flex;
+  flex-direction: column;
+}
+main .chatView .daySection .message .messageBody .photoAttachments .photoFilename {
+  color: #3577EF;
+}
+main .chatView .daySection .message .messageBody .photoAttachments .photoAttachmentContainer {
+  display: flex;
+  position: relative;
+  max-width: 300px;
+}
+main .chatView .daySection .message .messageBody .photoAttachments .photoAttachmentContainer .photoAttachment {
+  border-radius: 5px;
+  background-color: #70CC16;
+  overflow: hidden;
+}
+main .chatView .daySection .message .messageBody .photoAttachments .photoAttachmentContainer .photoAttachment img {
+  display: block;
+  max-width: 300px;
+}
+main .chatView .daySection .message .messageBody .photoAttachments .photoAttachmentContainer .reactionsContainer {
+  display: flex;
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 5px 7px 0;
+  justify-content: center;
+  height: 24px;
+  width: 40px;
+  background-color: white;
+  border-radius: 10%;
+}
+main .chatView .daySection .message .messageBody .photoAttachments .photoAttachmentContainer .reactionsContainer img {
+  height: 15px;
+  margin: auto 0;
+  padding-right: 5px;
+}
+main .chatView .daySection .message .messageBody .photoAttachments .photoAttachmentContainer .reactionsContainer .reactionsCounter {
+  margin: auto 0;
+}
+main .messageInput {
+  display: flex;
+  height: 80px;
+  border-top: 1px solid #A4A4A4;
+}
+main .messageInput .inputField {
+  border: none;
+  width: 90%;
+}
+main .messageInput .inputOptionIcon {
+  margin: auto 10px;
+  height: 22px;
+}
+main .messageInput ::placeholder {
+  font-size: 16px;
+}
+@media (max-width: 950px) {
+  main {
+    width: calc(100vw - 250px);
+  }
+}
+@media (max-width: 850px) {
+  main {
+    width: 100vw;
+  }
+}
+
+aside {
+  width: 200px;
+  background: linear-gradient(0.45turn, #EBEBEC, #D0D4D8, #CFD3D7);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+aside .profileOverviewPic {
+  width: 100%;
+  height: 200px;
+}
+aside .profileOverviewNameHeader {
+  display: grid;
+  grid-row-gap: 2px;
+  padding: 15px;
+}
+aside .profileOverviewNameHeader .name {
+  display: flex;
+}
+aside .profileOverviewNameHeader .name span {
+  font-weight: 700;
+}
+aside .profileOverviewNameHeader .name .activeStatusIcon {
+  margin-left: 6px;
+  align-self: center;
+  background-color: #70CC16;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+}
+aside .profileOverviewNameHeader .profession {
+  font-size: 12px;
+  color: #5F6164;
+}
+aside .socialMediaIconsContainer {
+  display: flex;
+  text-align: center;
+  padding: 5px 0 0 15px;
+}
+aside .socialMediaIconsContainer .socialMediaIcon {
+  background-color: #E8E8EB;
+  height: 20px;
+  width: 20px;
+  margin-right: 7px;
+  border-radius: 50%;
+  position: relative;
+}
+aside .socialMediaIconsContainer .socialMediaIcon img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+aside .messageButtonContainer {
+  display: flex;
+  gap: 5px;
+  padding: 15px 0 15px 15px;
+}
+aside .messageButtonContainer .messageButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3577EF;
+  color: white;
+  width: 134px;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+aside .messageButtonContainer .expandOptionsButton {
+  display: flex;
+  background-color: #3577EF;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+}
+aside .messageButtonContainer .expandOptionsButton .expandTriangleIcon {
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-top: 4.5px solid white;
+  border-bottom: 0;
+}
+aside .infoCell {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 15px 15px;
+  font-size: 14px;
+  font-weight: 400;
+}
+aside .infoCell .infoType {
+  color: #5F6164;
+}
+@media (max-width: 950px) {
+  aside {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="nav">
+    <div class="navHeader">
+        <span>Nomad List</span>
+        <div class="expandIcon">
+            <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/expandIcon.svg" alt="">
+        </div>
+        <div class="settingsIcon">
+            <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/settingsIcon.svg" alt="">
+        </div>
+    </div>
+    <div class="navAllTreads">
+        <div class="messageIcon">
+            <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/messageIcon.svg" alt="">
+        </div>
+        <span>All treads</span>
+    </div>
+    <div class="chatsList">
+        <div class="channels">
+            <div class="channelsSectionHead">
+                <span class="channelsSectionHeadTitle">CHANNELS</span>
+                <span class="channelsSectionHeadCount">11</span>
+            </div>
+            <div class="channelsList">
+                <div class="channelCell">
+                    <span>#general</span>
+                </div>
+                <div class="channelCell">
+                    <span>#support</span>
+                </div>
+                <div class="channelCell">
+                    <span>#marketing</span>
+                </div>
+                <div class="channelCell">
+                    <span>#thailand</span>
+                </div>
+                <div class="channelCell">
+                    <span>#bali</span>
+                </div>
+                <div class="channelCell">
+                    <span>#poland</span>
+                </div>
+                <div class="channelCell">
+                    <span>#austria</span>
+                </div>
+                <div class="channelCell">
+                    <span>#jobs</span>
+                </div>
+                <div class="channelCell">
+                    <span>#startups</span>
+                </div>
+                <div class="channelCell">
+                    <span>#italy</span>
+                </div>
+                <div class="channelCell">
+                    <span>#freelance</span>
+                </div>
+            </div>
+        </div>
+        <div class="friends">
+            <div class="friendsSectionHead">
+                <span class="friendsSectionHeadTitle">FRIENDS</span>
+                <span class="friendsSectionHeadCount">23</span>
+            </div>
+            <div class="friendsList">
+                <div class="friendCell">
+                    <div class="activeStatusIcon">
+                    </div>
+                    <div class="profilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/1.png" alt="">
+                    </div>
+                    <div class="friendName">
+                        <span>Orlando Diggs</span>
+                    </div>
+                </div>
+                <div class="friendCell">
+                    <div class="activeStatusIcon">
+                    </div>
+                    <div class="profilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/2.png" alt="">
+                    </div>
+                    <div class="friendName">
+                        <span>Carmen Velasco</span>
+                    </div>
+                </div>
+                <div class="friendCell">
+                    <div class="activeStatusIcon">
+                    </div>
+                    <div class="profilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/3.png" alt="">
+                    </div>
+                    <div class="friendName">
+                        <span>Marie Jensen</span>
+                    </div>
+                </div>
+                <div class="friendCell">
+                    <div class="activeStatusIcon">
+                    </div>
+                    <div class="profilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/4.png" alt="">
+                    </div>
+                    <div class="friendName">
+                        <span>Alex Lee</span>
+                    </div>
+                </div>
+                <div class="friendCell">
+                    <div class="activeStatusIcon">
+                    </div>
+                    <div class="profilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/5.png" alt="">
+                    </div>
+                    <div class="friendName">
+                        <span>Leo Gill</span>
+                    </div>
+                </div>
+                <div class="friendCell">
+                    <div class="activeStatusIcon">
+                    </div>
+                    <div class="profilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/6.png" alt="">
+                    </div>
+                    <div class="friendName">
+                        <span>Britney Cooper</span>
+                    </div>
+                </div>
+                <div class="friendCell">
+                    <div class="activeStatusIcon">
+                    </div>
+                    <div class="profilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/7.png" alt="">
+                    </div>
+                    <div class="friendName">
+                        <span>Melany Smith</span>
+                    </div>
+                </div>
+                <div class="friendCell">
+                    <div class="activeStatusIcon">
+                    </div>
+                    <div class="profilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/8.png" alt="">
+                    </div>
+                    <div class="friendName">
+                        <span>Thomas Rye</span>
+                    </div>
+                </div>
+                <div class="friendCell">
+                    <div class="activeStatusIcon">
+                    </div>
+                    <div class="profilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/9.png" alt="">
+                    </div>
+                    <div class="friendName">
+                        <span>Reese Hamilton</span>
+                    </div>
+                </div>
+                <div class="friendCell">
+                    <div class="activeStatusIcon">
+                    </div>
+                    <div class="profilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/10.png" alt="">
+                    </div>
+                    <div class="friendName">
+                        <span>Carla Dolores</span>
+                    </div>
+                </div>
+                <div class="friendCell">
+                    <div class="activeStatusIcon">
+                    </div>
+                    <div class="profilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/navIcons/11.png" alt="">
+                    </div>
+                    <div class="friendName">
+                        <span>Samantha James</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<main>
+    <header class="chatMenu">
+        <div class="chatInfo">
+            <div class="chatName">
+                <span>#general</span>
+                <div class="favoriteIcon">
+                    <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/c16339cc87796eab771c1897605b1845231098f5/mainElements/chatMenuElements/favoriteIcon.svg"
+                         alt="">
+                </div>
+            </div>
+            <div class="chatMembersNumber">
+                <div class="chatMembersNumberIcon">
+                    <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/c16339cc87796eab771c1897605b1845231098f5/mainElements/chatMenuElements/chatMembersNumber.svg"
+                         alt="">
+                </div>
+                <span>1,093</span>
+            </div>
+        </div>
+        <div class="chatSettings">
+            <div class="chatSearch">
+                <span>Search...</span>
+                <div class="searchIcon">
+                    <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/928f95ff8523fff89e45a98f412d951f1aa06a9b/mainElements/chatMenuElements/searchIcon.svg"
+                         alt="">
+                </div>
+            </div>
+            <div class="notificationsController">
+                <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/d3272d096e492c81eb01dce1b0c77ce388246eea/mainElements/chatMenuElements/notificationsIcon.svg"
+                     alt="">
+                <div class="notificationsActiveStatusIcon"></div>
+            </div>
+            <div class="chatSettingsIcon">
+                <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/d3272d096e492c81eb01dce1b0c77ce388246eea/mainElements/chatMenuElements/settingsMenuIcon.svg"
+                     alt="">
+            </div>
+        </div>
+    </header>
+    <div class="chatView">
+        <div class="daySection">
+            <div class="daySectionHeader">
+                <div class="daySectionHeaderLine"></div>
+                <span class="day">Today</span>
+                <div class="daySectionHeaderLine"></div>
+            </div>
+            <div class="message">
+                <div class="messageProfilePicContainer">
+                    <div class="messageProfilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/userIcons/2.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="messageBody">
+                    <div class="messageHeader">
+                        <div class="messageUsername">
+                            <span>Nala Hester</span>
+                        </div>
+                        <div class="messageTime">
+                            <span>11:54 AM</span>
+                        </div>
+                    </div>
+                    <div class="messageText">
+                        <span>Working from a van in Australia isn’t feasible if you need internet. It may have improved over the last years but I spent some time in a camper van around Tasmania and internet was a real problem (and Tasmania is tiny compared to the rest of the country).</span>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <div class="messageProfilePicContainer">
+                    <div class="messageProfilePic">
+                        <img
+                                src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/userIcons/1.png"
+                                alt="">
+                    </div>
+                </div>
+                <div class="messageBody">
+                    <div class="messageHeader">
+                        <div class="messageUsername">
+                            <span>Ramon Bateman</span>
+                        </div>
+                        <div class="messageTime">
+                            <span>11:59 AM</span>
+                        </div>
+                    </div>
+                    <div class="messageText">
+                        <span>@aa_da What's the reason for the van? Saving money or just like to get outside? If you've got a stable source of income you could always do some short term Airbnbs + buy a truck/topper, build a platform in the back. That way you can always convert it back to a truck and sleep in an apartment if you want.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="daySection">
+            <div class="daySectionHeader">
+                <div class="daySectionHeaderLine"></div>
+                <span class="day">Yesterday</span>
+                <div class="daySectionHeaderLine"></div>
+            </div>
+            <div class="message">
+                <div class="messageProfilePicContainer">
+                    <div class="messageProfilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/userIcons/3.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="messageBody">
+                    <div class="messageHeader">
+                        <div class="messageUsername">
+                            <span>Aada Laine</span>
+                        </div>
+                        <div class="messageTime">
+                            <span>11:54 AM</span>
+                        </div>
+                    </div>
+                    <div class="messageText">
+                        <span>@har_adams wow it’s amazing, I want to buy a van and travelling next year</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="daySection">
+            <div class="daySectionHeader">
+                <div class="daySectionHeaderLine"></div>
+                <span class="day">Monday, October 22nd</span>
+                <div class="daySectionHeaderLine"></div>
+            </div>
+            <div class="message">
+                <div class="messageProfilePicContainer">
+                    <div class="messageProfilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/userIcons/4.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="messageBody">
+                    <div class="messageHeader">
+                        <div class="messageUsername">
+                            <span>Harold Adams</span>
+                        </div>
+                        <div class="messageTime">
+                            <span>5:02 PM</span>
+                        </div>
+                    </div>
+                    <div class="messageText">
+                        <span>Which country to visit next? This is a photo with my friends - celebrating in Bali</span>
+                    </div>
+                    <div class="photoAttachments">
+                        <span class="photoFilename">my-top-places.jpg</span>
+                        <div class="photoAttachmentContainer">
+                            <div class="photoAttachment">
+                            <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/messageReactionsStuff/sunsetFriends.jpeg" alt="">
+                            </div>
+                            <div class="reactionsContainer">
+                                <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/messageReactionsStuff/loveEmoji.png" alt="">
+                                <span class="reactionsCounter">3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="daySection">
+            <div class="daySectionHeader">
+                <div class="daySectionHeaderLine"></div>
+                <span class="day">Friday, October 19th</span>
+                <div class="daySectionHeaderLine"></div>
+            </div>
+            <div class="message">
+                <div class="messageProfilePicContainer">
+                    <div class="messageProfilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/userIcons/5.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="messageBody">
+                    <div class="messageHeader">
+                        <div class="messageUsername">
+                            <span>Jeshua Stout</span>
+                        </div>
+                        <div class="messageTime">
+                            <span>6:38 PM</span>
+                        </div>
+                    </div>
+                    <div class="messageText">
+                        <span>@pierrhack I did for 6 days in Iceland</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="daySection">
+            <div class="daySectionHeader">
+                <div class="daySectionHeaderLine"></div>
+                <span class="day">Sometime</span>
+                <div class="daySectionHeaderLine"></div>
+            </div>
+            <div class="message">
+                <div class="messageProfilePicContainer">
+                    <div class="messageProfilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/userIcons/5.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="messageBody">
+                    <div class="messageHeader">
+                        <div class="messageUsername">
+                            <span>Jeshua Stout</span>
+                        </div>
+                        <div class="messageTime">
+                            <span>6:38 PM</span>
+                        </div>
+                    </div>
+                    <div class="messageText">
+                        <span>@pierrhack I did for 6 days in Iceland</span>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <div class="messageProfilePicContainer">
+                    <div class="messageProfilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/userIcons/4.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="messageBody">
+                    <div class="messageHeader">
+                        <div class="messageUsername">
+                            <span>Harold Adams</span>
+                        </div>
+                        <div class="messageTime">
+                            <span>5:02 PM</span>
+                        </div>
+                    </div>
+                    <div class="messageText">
+                        <span>Which country to visit next? This is a photo with my friends - celebrating in Bali</span>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <div class="messageProfilePicContainer">
+                    <div class="messageProfilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/userIcons/3.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="messageBody">
+                    <div class="messageHeader">
+                        <div class="messageUsername">
+                            <span>Aada Laine</span>
+                        </div>
+                        <div class="messageTime">
+                            <span>11:54 AM</span>
+                        </div>
+                    </div>
+                    <div class="messageText">
+                        <span>@har_adams wow it’s amazing, I want to buy a van and travelling next year</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="daySection">
+            <div class="daySectionHeader">
+                <div class="daySectionHeaderLine"></div>
+                <span class="day">Sometime</span>
+                <div class="daySectionHeaderLine"></div>
+            </div>
+            <div class="message">
+                <div class="messageProfilePicContainer">
+                    <div class="messageProfilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/userIcons/5.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="messageBody">
+                    <div class="messageHeader">
+                        <div class="messageUsername">
+                            <span>Jeshua Stout</span>
+                        </div>
+                        <div class="messageTime">
+                            <span>6:38 PM</span>
+                        </div>
+                    </div>
+                    <div class="messageText">
+                        <span>@pierrhack I did for 6 days in Iceland</span>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <div class="messageProfilePicContainer">
+                    <div class="messageProfilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/userIcons/4.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="messageBody">
+                    <div class="messageHeader">
+                        <div class="messageUsername">
+                            <span>Harold Adams</span>
+                        </div>
+                        <div class="messageTime">
+                            <span>5:02 PM</span>
+                        </div>
+                    </div>
+                    <div class="messageText">
+                        <span>Which country to visit next? This is a photo with my friends - celebrating in Bali</span>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <div class="messageProfilePicContainer">
+                    <div class="messageProfilePic">
+                        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/mainElements/userIcons/3.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="messageBody">
+                    <div class="messageHeader">
+                        <div class="messageUsername">
+                            <span>Aada Laine</span>
+                        </div>
+                        <div class="messageTime">
+                            <span>11:54 AM</span>
+                        </div>
+                    </div>
+                    <div class="messageText">
+                        <span>@har_adams wow it’s amazing, I want to buy a van and travelling next year</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="messageInput">
+        <div class="inputOptionIcon">
+            <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/6836845a1255a4b3a5abf909b4ecd0a59bf83554/mainElements/inputIcons/attachmentIcon.svg" alt="">
+        </div>
+        <div class="inputOptionIcon">
+            <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/6836845a1255a4b3a5abf909b4ecd0a59bf83554/mainElements/inputIcons/recordAudioIcon.svg" alt="">
+        </div>
+        <input class="inputField" type="text" placeholder="Message in #general">
+        <div class="inputOptionIcon">
+            <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/6836845a1255a4b3a5abf909b4ecd0a59bf83554/mainElements/inputIcons/attachEmojiIcon.svg" alt="">
+        </div>
+    </div>
+</main>
+<aside class="profileOverview">
+    <div class="profileOverviewPic">
+        <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/main/asideElements/asideProfilePic.png"
+             alt="">
+    </div>
+    <div class="profileOverviewNameHeader">
+        <div class="name">
+            <span>Amilia Luna</span>
+            <div class="activeStatusIcon"></div>
+        </div>
+        <div class="profession">
+            <span>UX Designer</span>
+        </div>
+    </div>
+    <div class="socialMediaIconsContainer">
+        <div class="socialMediaIcon">
+            <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/5764b1be15f832abbee8c8582ff1ca716e7f51e0/asideElements/facebookIcon.svg"
+                 alt="">
+        </div>
+        <div class="socialMediaIcon">
+            <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/5764b1be15f832abbee8c8582ff1ca716e7f51e0/asideElements/twitterIcon.svg"
+                 alt="">
+        </div>
+        <div class="socialMediaIcon">
+            <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/5764b1be15f832abbee8c8582ff1ca716e7f51e0/asideElements/instagramIcon.svg"
+                 alt="">
+        </div>
+        <div class="socialMediaIcon">
+            <img src="https://raw.githubusercontent.com/zloirazrab/webAppChat/5764b1be15f832abbee8c8582ff1ca716e7f51e0/asideElements/linkedinIcon.svg"
+                 alt="">
+        </div>
+    </div>
+    <div class="messageButtonContainer">
+        <div class="messageButton">
+            <span>Message</span>
+        </div>
+        <div class="expandOptionsButton">
+            <div class="expandTriangleIcon"></div>
+        </div>
+    </div>
+    <div class="infoCell">
+        <span class="infoType">Username</span>
+        <span class="content">@amilia_lu</span>
+    </div>
+    <div class="infoCell">
+        <span class="infoType">Email</span>
+        <span class="content">a-luna@gmail.com</span>
+    </div>
+    <div class="infoCell">
+        <span class="infoType">Skype</span>
+        <span class="content">amiluna</span>
+    </div>
+    <div class="infoCell">
+        <span class="infoType">Timezone</span>
+        <span class="content">2:21 PM Local time</span>
+    </div>
+</aside>
+</body>
+</html>
